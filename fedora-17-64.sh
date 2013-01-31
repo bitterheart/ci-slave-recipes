@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 
-. ./fedora-18.sh
+. ./fedora-17.sh
 
 yum --assumeyes groupinstall "Development Tools"
 
