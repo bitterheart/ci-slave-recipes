@@ -1,7 +1,7 @@
 #!/bin/sh -ex
 
-zypper update
+zypper update --no-confirm
 
-zypper install java-1_7_0-ibm
+zypper install --no-confirm java-1_7_0-ibm
 
 mkdir /jenkins
