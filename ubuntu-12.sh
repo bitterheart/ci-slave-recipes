@@ -1,5 +1,8 @@
 #!/bin/sh -ex
 
+# give cloud-init time to finish its work before starting to access repositories
+sleep 30
+
 apt-get --quiet --assume-yes update
 
 apt-get --quiet --assume-yes install language-pack-en
