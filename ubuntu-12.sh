@@ -1,10 +1,12 @@
 #!/bin/sh -ex
 
-apt-get --assume-yes update
+apt-get --quiet --assume-yes update
 
-apt-get --assume-yes dist-upgrade
+apt-get --quiet --assume-yes install language-pack-en
 
-apt-get --assume-yes install openjdk-7-jre
+apt-get --quiet --assume-yes dist-upgrade
+
+apt-get --quiet --assume-yes install openjdk-7-jre
 
 mkdir /jenkins
 chown ubuntu: /jenkins
