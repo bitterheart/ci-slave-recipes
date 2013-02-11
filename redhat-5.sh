@@ -1,5 +1,7 @@
 #!/bin/sh -ex
 
+rpm --install epel-release-5-4.noarch.rpm
+
 yum -y update
 
 # this must be removed before java-1.4.2-gcj-compat due to a bug in 'yum'
@@ -9,6 +11,6 @@ yum -y remove postgresql-jdbc
 
 yum -y remove java-1.4.2-gcj-compat
 
-yum -y install java-1.6.0-openjdk
+yum -y install java-1.6.0-openjdk python26
 
 mkdir /jenkins
