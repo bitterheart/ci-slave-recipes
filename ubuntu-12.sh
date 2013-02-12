@@ -1,7 +1,7 @@
 #!/bin/sh -ex
 
 # give cloud-init time to finish its work before starting to access repositories
-sleep 30
+sleep 35
 
 apt-get --quiet --assume-yes update
 
