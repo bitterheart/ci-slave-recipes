@@ -2,7 +2,7 @@
 
 . ./ubuntu-13.04.sh
 
-add-apt-repository --yes ubuntu-toolchain-r/test
+add-apt-repository --yes ppa:ubuntu-toolchain-r/test
 
 apt-get --quiet --assume-yes update
 
