@@ -1,9 +1,9 @@
 #!/bin/sh -ex
 
+export DEBIAN_FRONTEND=noninteractive
+
 # give cloud-init time to finish its work before starting to access repositories
 sleep 35
-
-add-apt-repository --yes ppa:ubuntu-toolchain-r/test
 
 apt-get --quiet --assume-yes update
 
