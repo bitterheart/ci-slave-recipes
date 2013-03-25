@@ -3,6 +3,8 @@
 # give cloud-init time to finish its work before starting to access repositories
 sleep 35
 
+add-apt-repository --yes ppa:ubuntu-toolchain-r/test
+
 apt-get --quiet --assume-yes update
 
 apt-get --quiet --assume-yes dist-upgrade
