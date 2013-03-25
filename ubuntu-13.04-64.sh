@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 
-. ./ubuntu-12.sh
+. ./ubuntu-13.04.sh
 
 add-apt-repository --yes ubuntu-toolchain-r/test
 
