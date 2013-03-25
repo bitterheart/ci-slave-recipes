@@ -1,5 +1,7 @@
 #!/bin/sh -ex
 
+export DEBIAN_FRONTEND=noninteractive
+
 # give cloud-init time to finish its work before starting to access repositories
 sleep 35
 
