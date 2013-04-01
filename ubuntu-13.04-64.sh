@@ -29,5 +29,5 @@ debchange -v 1.59-1 "New upstream release"
 sed -i -e s/tinyxml/tinyxml2/ debian/control debian/rules
 dpkg-buildpackage -b -us
 cd ..
-dpkg --install cppcheck_1.59-1.deb
+dpkg --install cppcheck_1.59-1_amd64.deb
 rm -rf cppcheck*
