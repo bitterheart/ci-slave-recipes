@@ -1,17 +1,10 @@
 #!/bin/sh -ex
 
-# remove openSUSE 12.2 repositories
-zypper --non-interactive removerepo Virtualization:Cloud:EC2_12.2
-zypper --non-interactive removerepo openSUSE_12.2_OSS
-zypper --non-interactive removerepo openSUSE_12.2_Updates
+zypper refresh
 
-# add openSUSE 12.3 repositories
-zypper --non-interactive addrepo --refresh http://download.opensuse.org/distribution/12.3/repo/oss openSUSE_12.3_OSS
-zypper --non-interactive addrepo --refresh http://download.opensuse.org/update/12.3 openSUSE_12.3_Updates
+zypper update --no-confirm
 
-zypper --non-interactive refresh
-
-zypper --non-interactive dist-upgrade --auto-agree-with-licenses
+zypper update --no-confirm
 
 zypper --non-interactive install --auto-agree-with-licenses java-1_7_0-openjdk
 
