@@ -19,15 +19,15 @@ apt-get --quiet --assume-yes build-dep cppcheck
 
 apt-get clean
 
-# Build cppcheck 1.59 and install it
+# Build cppcheck 1.61 and install it
 apt-get --quiet --assume-yes source cppcheck
-wget http://downloads.sourceforge.net/project/cppcheck/cppcheck/1.59/cppcheck-1.59.tar.bz2
-tar xf cppcheck-1.59.tar.bz2
-cd cppcheck-1.59
+wget http://downloads.sourceforge.net/project/cppcheck/cppcheck/1.61/cppcheck-1.61.tar.bz2
+tar xf cppcheck-1.61.tar.bz2
+cd cppcheck-1.61
 tar xf ../cppcheck_1.58-1.debian.tar.gz
-debchange -v 1.59-1 "New upstream release"
+debchange -v 1.61-1 "New upstream release"
 sed -i -e s/tinyxml/tinyxml2/ debian/control debian/rules
 dpkg-buildpackage -b -us
 cd ..
-dpkg --install cppcheck_1.59-1_amd64.deb
+dpkg --install cppcheck_1.61-1_amd64.deb
 rm -rf cppcheck*
