@@ -2,7 +2,7 @@
 
 . ./redhat-6.sh
 
-rpm --install epel-release-6-8.noarch.rpm
+rpm --install epel-release-6-8.noarch.rpm # needed for ccache
 
 yum --assumeyes groupinstall "Development Tools"
 
